@@ -37,3 +37,24 @@ var actress = {
 for (var property in actress) {
     console.log("actress." + property + " = " + actress[property]);
 }
+
+
+// let s = "javascriptloops";
+
+// function vowelsAndConsonants(s) {
+//     const vowels = [];
+//     const consonants = [];
+//     let l;
+     
+//     for (let l of s){
+//         if("aeiou".includes(l)) {
+//             vowels.push(l);
+//         } else {
+//             consonants.push(l)
+//         }
+//     }
+    
+//     console.log(vowels.join("\n"));
+//     console.log(consonants.join("\n"));
+
+// }
