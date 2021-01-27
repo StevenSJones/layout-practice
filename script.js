@@ -25,19 +25,17 @@
 
 // function getGrade(score)
 
-
 var actress = {
-    firstName: "Julia",
-    lastName: "Roberts",
-    dateOfBirth: "October 28, 1967",
-    nationality: "American",
-    firstMovie: "Satisfaction"
+  firstName: "Julia",
+  lastName: "Roberts",
+  dateOfBirth: "October 28, 1967",
+  nationality: "American",
+  firstMovie: "Satisfaction",
 };
 
 for (var property in actress) {
-    console.log("actress." + property + " = " + actress[property]);
+  console.log("actress." + property + " = " + actress[property]);
 }
-
 
 // let s = "javascriptloops";
 
@@ -45,7 +43,7 @@ for (var property in actress) {
 //     const vowels = [];
 //     const consonants = [];
 //     let l;
-     
+
 //     for (let l of s){
 //         if("aeiou".includes(l)) {
 //             vowels.push(l);
@@ -53,8 +51,20 @@ for (var property in actress) {
 //             consonants.push(l)
 //         }
 //     }
-    
+
 //     console.log(vowels.join("\n"));
 //     console.log(consonants.join("\n"));
 
 // }
+
+/*  When you set local and global vars with the same name, the local variable takes precedence over the global variable:*/
+var outerWear = "T-Shirt";
+
+function myOutfit() {
+  var outerWear = "sweater";
+  console.log(outerWear);// logs sweater
+  return outerWear;
+}
+
+myOutfit();
+console.log(outerWear); //logs T-Shirt
