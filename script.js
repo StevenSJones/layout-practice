@@ -37,34 +37,27 @@ for (var property in actress) {
   console.log("actress." + property + " = " + actress[property]);
 }
 
-// let s = "javascriptloops";
-
-// function vowelsAndConsonants(s) {
-//     const vowels = [];
-//     const consonants = [];
-//     let l;
-
-//     for (let l of s){
-//         if("aeiou".includes(l)) {
-//             vowels.push(l);
-//         } else {
-//             consonants.push(l)
-//         }
-//     }
-
-//     console.log(vowels.join("\n"));
-//     console.log(consonants.join("\n"));
-
-// }
-
 /*  When you set local and global vars with the same name, the local variable takes precedence over the global variable:*/
 var outerWear = "T-Shirt";
 
 function myOutfit() {
   var outerWear = "sweater";
-  console.log(outerWear);// logs sweater
+  console.log(outerWear); // logs sweater
   return outerWear;
 }
 
 myOutfit();
 console.log(outerWear); //logs T-Shirt
+
+// passing values into a function with arguments and using a return statement to send a value back out of a function.
+function timesFive(num) {
+  return num * 5;
+}
+let answer = timesFive(5);
+console.log(answer);
+
+let answer1 = timesFive(2);
+console.log(answer1);
+
+let answer2 = timesFive(25);
+console.log(answer2);
