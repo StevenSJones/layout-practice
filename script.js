@@ -61,3 +61,20 @@ console.log(answer1);
 
 let answer2 = timesFive(25);
 console.log(answer2);
+
+/*A function can include a return statement but it DOES NOT have to
+In the absence of a return statement, the returned value is undefined.*/
+
+
+
+function addTen(sum){
+    sum = sum + 10;
+    console.log(sum);
+    //sum equaled 20
+}
+
+ addTen(10);
+ console.log(addTen);
+ /*came back with the definition of the function: shown just above*/ 
+ console.log(sum);
+ /*came back with an error: Uncaught ReferenceError: sum is not defined.*/
