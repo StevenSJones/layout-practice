@@ -76,5 +76,15 @@ function addTen(sum){
  addTen(10);
  console.log(addTen);
  /*came back with the definition of the function: shown just above*/ 
- console.log(sum);
+//  console.log(sum);
  /*came back with an error: Uncaught ReferenceError: sum is not defined.*/
+
+ /*  Storing Values with the Assignment Operator: everything to the right of the equal sign is resolved before the value is assigned. This means we can take the return value of a function and assign it to a variable.*/
+var processed = 0;
+
+function processArg(num) {
+  return (num + 3) / 5;
+}
+
+processed = processArg(7)
+console.log(processed); //returned 2 to the console.
