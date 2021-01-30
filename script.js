@@ -88,3 +88,12 @@ function processArg(num) {
 
 processed = processArg(7)
 console.log(processed); //returned 2 to the console.
+
+
+//--------------------------------------------------------//
+//use 'Set' object to remove duplicates from an array.
+const numbers = [1, 2, 3, 3, 4, 5, 6, 7, 7, 8, 8, 9, 9, 10];
+
+const uniqueNumbers = [...new Set(numbers)];
+
+console.log(uniqueNumbers);
