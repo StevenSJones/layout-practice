@@ -97,3 +97,24 @@ const numbers = [1, 2, 3, 3, 4, 5, 6, 7, 7, 8, 8, 9, 9, 10];
 const uniqueNumbers = [...new Set(numbers)];
 
 console.log(uniqueNumbers);
+
+//------------------------------------------------
+//Find maximum item of an Array by given key using #javascript.
+const people = [
+  { name: "Goku", age: 11 },
+  { name: "yusuke", age: 14 },
+  { name: "Spike", age: 27 },
+  { name: "Vash", age: 131 },
+];
+
+const maxBy = (arr, key) => {
+  return arr.reduce((max, obj) => {
+    return max[key] >= obj[key] ? max : obj;
+  }, {});
+  
+};
+
+maxBy(people, "age");
+
+//where do i place the console.log to find the result
+console.log(maxBy);
