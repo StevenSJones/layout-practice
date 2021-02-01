@@ -153,6 +153,11 @@ for (let i = 0; i < animeChars.length; i++) {
   );
 }
 
+//creating a forEach High order function method that prints the a concatenated phrase to the console with name and age of each item in the array followed by the object itself from the array.
+animeChars.forEach(function (character) {
+  console.log(character.name + " is " + character.age + " years of age!!!");
+  console.log(character);
+})
 
 
 // //------------------------------------------------
