@@ -163,6 +163,7 @@ animeChars.forEach(function (character) {
   console.log(character);
 });
 
+//the function from above in arrow function format with the character object stringified so that it does not show object:object
 animeChars.forEach(character => 
   console.log("Characters: " + JSON.stringify(character)));
 ;
