@@ -65,30 +65,27 @@ console.log(answer2);
 /*A function can include a return statement but it DOES NOT have to
 In the absence of a return statement, the returned value is undefined.*/
 
-
-
-function addTen(sum){
-    sum = sum + 10;
-    console.log(sum);
-    //sum equaled 20
+function addTen(sum) {
+  sum = sum + 10;
+  console.log(sum);
+  //sum equaled 20
 }
 
- addTen(10);
- console.log(addTen);
- /*came back with the definition of the function: shown just above*/ 
+addTen(10);
+console.log(addTen);
+/*came back with the definition of the function: shown just above*/
 //  console.log(sum);
- /*came back with an error: Uncaught ReferenceError: sum is not defined.*/
+/*came back with an error: Uncaught ReferenceError: sum is not defined.*/
 
- /*  Storing Values with the Assignment Operator: everything to the right of the equal sign is resolved before the value is assigned. This means we can take the return value of a function and assign it to a variable.*/
+/*  Storing Values with the Assignment Operator: everything to the right of the equal sign is resolved before the value is assigned. This means we can take the return value of a function and assign it to a variable.*/
 var processed = 0;
 
 function processArg(num) {
   return (num + 3) / 5;
 }
 
-processed = processArg(7)
+processed = processArg(7);
 console.log(processed); //returned 2 to the console.
-
 
 //--------------------------------------------------------//
 //use 'Set' object to remove duplicates from an array.
@@ -98,23 +95,83 @@ const uniqueNumbers = [...new Set(numbers)];
 
 console.log(uniqueNumbers);
 
-//------------------------------------------------
-//Find maximum item of an Array by given key using #javascript.
-const people = [
-  { name: "Goku", age: 11 },
-  { name: "yusuke", age: 14 },
-  { name: "Spike", age: 27 },
-  { name: "Vash", age: 131 },
+//--------------------------------------------
+
+const animeChars = [
+  { name: "Goku", age: 11 }, //1
+  { name: "Yusuke", age: 14 }, //2
+  { name: "Spike", age: 27 }, //3
+  { name: "Vash", age: 131 }, //4
+  { name: "Gene", age: 20 }, //5
+  { name: "Edward", age: 12 }, //6
+  { name: "Afro", age: 28 }, //7
+  { name: "Vegeta", age: 732 }, //8
+  { name: "Kenshin", age: 28 }, //9
+  { name: "Roger", age: 30 }, //10
 ];
 
-const maxBy = (arr, key) => {
-  return arr.reduce((max, obj) => {
-    return max[key] >= obj[key] ? max : obj;
-  }, {});
-  
-};
+//explicitly printing name and age forEach item in the array one at a time.
+console.log(
+  "My name is " + animeChars[0].name + " and I am " + animeChars[0].age
+);
+console.log(
+  "My name is " + animeChars[1].name + " and I am " + animeChars[1].age
+);
+console.log(
+  "My name is " + animeChars[2].name + " and I am " + animeChars[2].age
+);
+console.log(
+  "My name is " + animeChars[3].name + " and I am " + animeChars[3].age
+);
+console.log(
+  "My name is " + animeChars[4].name + " and I am " + animeChars[4].age
+);
+console.log(
+  "My name is " + animeChars[5].name + " and I am " + animeChars[5].age
+);
+console.log(
+  "My name is " + animeChars[6].name + " and I am " + animeChars[6].age
+);
+console.log(
+  "My name is " + animeChars[7].name + " and I am " + animeChars[7].age
+);
+console.log(
+  "My name is " + animeChars[8].name + " and I am " + animeChars[8].age
+);
+console.log(
+  "My name is " + animeChars[9].name + " and I am " + animeChars[9].age
+);
 
-maxBy(people, "age");
+//creating a for loop that prints name and age forEach item in the array. Initialization, termination condition, iteration
+for (let i = 0; i < animeChars.length; i++) {
+  console.log(
+    "My name is " +
+      animeChars[i].name +
+      " and I am " +
+      animeChars[i].age +
+      " years old!"
+  );
+}
+
+
+
+// //------------------------------------------------
+// //Find maximum item of an Array by given key using #javascript.
+// const people = [
+//   { name: "Goku", age: 11 },
+//   { name: "yusuke", age: 14 },
+//   { name: "Spike", age: 27 },
+//   { name: "Vash", age: 131 },
+// ];
+
+// const maxBy = (arr, key) => {
+//   return arr.reduce((max, obj) => {
+//     return max[key] >= obj[key] ? max : obj;
+//   }, {});
+
+// };
+
+// maxBy(people, "age");
 
 //where do i place the console.log to find the result
-console.log(maxBy);
+// console.log(maxBy);
