@@ -25,6 +25,7 @@
 
 // function getGrade(score)
 
+//for in loop loop that iterates over each property in the the object and logs a subsequent statement to the console each time it loops.
 var actress = {
   firstName: "Julia",
   lastName: "Roberts",
@@ -157,8 +158,7 @@ for (let i = 0; i < animeChars.length; i++) {
 animeChars.forEach(function (character) {
   console.log(character.name + " is " + character.age + " years of age!!!");
   console.log(character);
-})
-
+});
 
 // //------------------------------------------------
 // //Find maximum item of an Array by given key using #javascript.
