@@ -38,6 +38,7 @@ for (var property in actress) {
   console.log("actress." + property + " = " + actress[property]);
 }
 
+//---------------------------------
 /*  When you set local and global vars with the same name, the local variable takes precedence over the global variable:*/
 var outerWear = "T-Shirt";
 
@@ -50,6 +51,7 @@ function myOutfit() {
 myOutfit();
 console.log(outerWear); //logs T-Shirt
 
+//----------------------------
 // passing values into a function with arguments and using a return statement to send a value back out of a function.
 function timesFive(num) {
   return num * 5;
@@ -63,6 +65,7 @@ console.log(answer1);
 let answer2 = timesFive(25);
 console.log(answer2);
 
+//--------------------------
 /*A function can include a return statement but it DOES NOT have to
 In the absence of a return statement, the returned value is undefined.*/
 
@@ -160,23 +163,25 @@ animeChars.forEach(function (character) {
   console.log(character);
 });
 
+animeChars.forEach(character => 
+  console.log("Characters: " + JSON.stringify(character)));
+;
+
 // //------------------------------------------------
-// //Find maximum item of an Array by given key using #javascript.
-// const people = [
-//   { name: "Goku", age: 11 },
-//   { name: "yusuke", age: 14 },
-//   { name: "Spike", age: 27 },
-//   { name: "Vash", age: 131 },
-// ];
+// //Find maximum item of an Array by given key using #javascript and the reduce() High Order Function method.
+const people = [
+  { name: "Goku", age: 11 },
+  { name: "yusuke", age: 14 },
+  { name: "Spike", age: 27 },
+  { name: "Vash", age: 131 },
+];
 
-// const maxBy = (arr, key) => {
-//   return arr.reduce((max, obj) => {
-//     return max[key] >= obj[key] ? max : obj;
-//   }, {});
+const maxBy = (arr, key) => {
+  return arr.reduce((max, obj) => {
+    return max[key] >= obj[key] ? max : obj;
+  }, {});
+};
 
-// };
+let maxItem = maxBy(people, "age");
 
-// maxBy(people, "age");
-
-//where do i place the console.log to find the result
-// console.log(maxBy);
+console.log(maxItem);
