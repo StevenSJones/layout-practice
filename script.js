@@ -157,6 +157,20 @@ for (let i = 0; i < animeChars.length; i++) {
   );
 }
 
+/*using js to - create an element that is an h1 and assigning that value to animeCharH1
+- assigning the value of the array animeChars.name + an ! to be the inner text of the variable animeCharH1 that I created above
+- appending (making appear on the page) the variable that I created and gave a value.
+*/
+let animeCharH1 = document.createElement("h1");
+animeCharH1.innerText = animeChars[0].name   + "!";
+document.body.append(animeCharH1);
+
+let animeCharAgeH2 = document.createElement("h2");
+animeCharAgeH2.innerText = animeChars[0].age;
+document.body.append(animeCharAgeH2);
+
+
+
 //creating a forEach High order function method that prints the a concatenated phrase to the console with name and age of each item in the array followed by the object itself from the array.
 animeChars.forEach(function (character) {
   console.log(character.name + " is " + character.age + " years of age!!!");
