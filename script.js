@@ -175,6 +175,11 @@ arrayLength.innerText = "The array length is: " + animeChars.length;
 document.body.append(arrayLength);
 
 
+let fourthAnimeChar = document.createElement("p");
+fourthAnimeChar.innerText = "The fourth character in the arrray of anime characters is " + animeChars[3].name;
+document.body.append(fourthAnimeChar);
+
+
 //creating a forEach High order function method that prints the a concatenated phrase to the console with name and age of each item in the array followed by the object itself from the array.
 animeChars.forEach(function (character) {
   console.log(character.name + " is " + character.age + " years of age!!!");
