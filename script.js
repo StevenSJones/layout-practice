@@ -162,13 +162,17 @@ for (let i = 0; i < animeChars.length; i++) {
 - appending (making appear on the page) the variable that I created and gave a value.
 */
 let animeCharH1 = document.createElement("h1");
-animeCharH1.innerText = animeChars[0].name   + "!";
+animeCharH1.innerText = "The first character in my array is: " + animeChars[0].name   + "!";
 document.body.append(animeCharH1);
 
 let animeCharAgeH2 = document.createElement("h2");
-animeCharAgeH2.innerText = animeChars[0].age;
+animeCharAgeH2.innerText = "The first age in my array is: " + animeChars[0].age;
 document.body.append(animeCharAgeH2);
 
+
+let arrayLength = document.createElement("h3");
+arrayLength.innerText = "The array length is: " + animeChars.length;
+document.body.append(arrayLength);
 
 
 //creating a forEach High order function method that prints the a concatenated phrase to the console with name and age of each item in the array followed by the object itself from the array.
