@@ -216,11 +216,11 @@ console.log(maxItem);
 
 //further playing with array functions
 const favBands = [
-  "Led Zeppelin",
-  "The Beetles",
-  "X Ambassadors",
-  "Bob Seger",
-  "Billy Raffoul",
+  "led zeppelin",
+  "the beetles",
+  "x ambassadors",
+  "bob seger",
+  "billy raffoul",
 ];
 
 //if else statement and includes
@@ -230,8 +230,22 @@ if (favBands.includes("Eagles")) {
   console.log("That band is not present in my list of favorite bands.");
 }
 
-let yourFavBands = prompt("What is your favorite Band?");
+//if else statement and includes
+//also using the toLowerCase() to sanitize the user input
+let yourFavBands = prompt("What is your favorite Band?").toLocaleLowerCase();
 
 if (favBands.includes(yourFavBands)) {
   alert("I love that band!");
-} else {alert("That's lame!")};
+} else {
+  alert("That's lame!");
+}
+
+//using the indexOf method.
+//also using the toLowerCase() to sanitize the user input
+let userAnotherFavBand = prompt("What is another of your favorite bands?").toLocaleLowerCase();
+
+if (favBands.indexOf(userAnotherFavBand) === -1) {
+  alert("I don't like that band enough to call it a favorite.");
+} else {
+  alert("That band is one of my favorites too!");
+}
