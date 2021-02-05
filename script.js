@@ -162,23 +162,23 @@ for (let i = 0; i < animeChars.length; i++) {
 - appending (making appear on the page) the variable that I created and gave a value.
 */
 let animeCharH1 = document.createElement("h1");
-animeCharH1.innerText = "The first character in my array is: " + animeChars[0].name   + "!";
+animeCharH1.innerText =
+  "The first character in my array is: " + animeChars[0].name + "!";
 document.body.append(animeCharH1);
 
 let animeCharAgeH2 = document.createElement("h2");
 animeCharAgeH2.innerText = "The first age in my array is: " + animeChars[0].age;
 document.body.append(animeCharAgeH2);
 
-
 let arrayLength = document.createElement("h3");
 arrayLength.innerText = "The array length is: " + animeChars.length;
 document.body.append(arrayLength);
 
-
 let fourthAnimeChar = document.createElement("p");
-fourthAnimeChar.innerText = "The fourth character in the arrray of anime characters is " + animeChars[3].name;
+fourthAnimeChar.innerText =
+  "The fourth character in the arrray of anime characters is " +
+  animeChars[3].name;
 document.body.append(fourthAnimeChar);
-
 
 //creating a forEach High order function method that prints the a concatenated phrase to the console with name and age of each item in the array followed by the object itself from the array.
 animeChars.forEach(function (character) {
@@ -187,10 +187,9 @@ animeChars.forEach(function (character) {
 });
 
 //the function from above in arrow function format with the character object stringified so that it does not show object:object
-animeChars.forEach(character => 
-  console.log("Characters: " + JSON.stringify(character)));
-;
-
+animeChars.forEach((character) =>
+  console.log("Characters: " + JSON.stringify(character))
+);
 // //------------------------------------------------
 // //Find maximum item of an Array by given key using #javascript and the reduce() High Order Function method.
 const people = [
@@ -207,5 +206,32 @@ const maxBy = (arr, key) => {
 };
 
 let maxItem = maxBy(people, "age");
-
 console.log(maxItem);
+
+// for (i = 0; i <= person.length; i++) {
+//   let `${people[i].name} + ageTimesSix` = document.createElement("h1");
+//   `${people[i].name} + ageTimesSix`.innerText = person.age * 6;
+//   document.body.append(`${people[i].name} + ageTimesSix`);
+// }
+
+//further playing with array functions
+const favBands = [
+  "Led Zeppelin",
+  "The Beetles",
+  "X Ambassadors",
+  "Bob Seger",
+  "Billy Raffoul",
+];
+
+//if else statement and includes
+if (favBands.includes("Eagles")) {
+  console.log("That band is present in my list of favorite bands.");
+} else {
+  console.log("That band is not present in my list of favorite bands.");
+}
+
+let yourFavBands = prompt("What is your favorite Band?");
+
+if (favBands.includes(yourFavBands)) {
+  alert("I love that band!");
+} else {alert("That's lame!")};
